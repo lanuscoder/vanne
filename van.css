@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+@font-face {
+    font-family: chi;
+    src: url(Hey\ Comic.otf);
+    font-family: chi2;
+    src: url(bahnschrift.ttf);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url(0505.png) no-repeat; 
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.text
+{
+    color: #fff;
+    text-align: center;
+    
+}
+
+.text h1 {
+    font-family: chi,cursive;
+    font-size: 6em;
+    text-shadow: 5px 5px 10px #111;
+    animation: floating 2s linear infinite;
+}
+section .text p{
+    z-index: 2;
+    font-family: chi2;
+    font-size: 2em;
+    text-shadow: 5px 5px 10px #111;
+}
+.anh{
+    z-index: 1;
+    width: 20em;
+    height: 20em;
+    margin-left: 30px;
+    cursor: pointer;
+    animation: young 2s infinite;
+}
+.anh:hover{
+    animation-play-state: paused;
+}
+.anh2
+{
+    width: 1em;
+    height: 1em;
+}
+.giphy-embed
+{
+    justify-content: left;
+}
+section .la
+{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+section .la div
+{
+    z-index: 3;
+    position: absolute;
+    display: block;
+}
+
+section .la div:nth-child(1)
+{
+    left: 20%;
+    animation: chuyen_dong 15s linear infinite;
+    animation-delay: -7s;
+}
+
+section .la div:nth-child(2)
+{
+    left: 50%;
+    animation: chuyen_dong 20s linear infinite;
+    animation-delay: -5s;
+}
+
+section .la div:nth-child(3)
+{
+    left: 70%;
+    animation: chuyen_dong 20s linear infinite;
+    animation-delay: 0s;
+}
+
+section .la div:nth-child(4)
+{
+    left: 0%;
+    animation: chuyen_dong 15s linear infinite;
+    animation-delay: -5s;
+}
+section .la div:nth-child(5)
+{
+    left: 85%;
+    animation: chuyen_dong 18s linear infinite;
+    animation-delay: -10s;
+}
+
+section .la div:nth-child(6)
+{
+    left: 0%;
+    animation: chuyen_dong 11s linear infinite;
+}
+
+section .la div:nth-child(6)
+{
+    left: 15%;
+    animation: chuyen_dong 14s linear infinite;
+}
+
+section .la div:nth-child(7)
+{
+    left: 15%;
+    animation: chuyen_dong 14s linear infinite;
+    animation-delay: -10s;
+}
+
+section .la div:nth-child(8)
+{
+    left: 65%;
+    animation: chuyen_dong 15s linear infinite;
+    animation-delay: -5s;
+}
+
+.la2
+{
+    transform: scale(2) rotateY(180deg);
+    filter:blur(2px);
+}
+
+.la3
+{
+    transform: scale(0.8) rotateX(180deg);
+    filter:blur(4px);
+}
+@keyframes chuyen_dong {
+    0%
+    {
+        opacity: 0;
+        top:-10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10%
+    {
+        opacity: 1;
+    }
+    20%
+    {
+        transform: translateX(-20px) rotate(45deg);
+    }
+    40%
+    {
+        transform: translateX(-20px) rotate(90deg);
+    }
+    60%
+    {
+        transform: translateX(20px) rotate(180deg);
+    }
+    80%
+    {
+        transform: translateX(-20px) rotate(180deg);
+    }
+    100%
+    {
+        top: 110%;
+        transform: translateX(-20px) rotate(225deg);
+    }
+}
+@keyframes floating {
+    0%
+    {
+        transform: translate(0,-50%);
+    }
+    50%
+    {
+        transform: translate(0,-30%);
+    }
+    100%
+    {
+        transform: translate(0,-50%);
+    }
+}
+@keyframes young {
+    0%
+    {
+        transform: rotateZ(-0.1rad);
+    }
+    50%
+    {
+        transform: rotateZ(0.1rad);
+    }
+    100%
+    {
+        transform: rotateZ(-0.1rad);
+    }
+}

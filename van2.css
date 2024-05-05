@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family: chi;
+    src: url(Hey\ Comic.otf);
+    font-family: chi2;
+    src: url(bahnschrift.ttf);
+}
+.card {
+    display: block;
+    position: absolute;
+    top: 10vmin;
+    left: 10vmin;
+    width: calc(50vw - 20vmin);
+    height: calc(105vh - 20vmin);
+    border-radius: 5vmin;
+    background: #eed5df;
+    overflow: hidden;
+    opacity: 80%;
+  }
+  body {
+    background: url(0505.png) no-repeat center;;
+    background-size: cover;
+    height: 100vh;
+    font-family: chi2, cursive;
+    overflow: hidden;
+  }
+  .card {
+    padding: 7vmin;
+    z-index: 1;
+    box-shadow: 0.5vmin 1vmin 2vmin 0 rgb(0 0 0 / 16%);
+  }
+  
+  .dear,
+  .from {
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 40px;
+  }
+  .from {
+    text-align: right;
+  }
+  
+  .dear {
+    margin-bottom: 3vw;
+  }
+.snow, .snow2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(snow.png);
+    background-position: 0 0;
+}
+.snow
+{
+    background-size: 70em;
+    animation: 
+        snowfall 50s linear infinite;
+    opacity: 90%;
+}
+
+.snow2
+{
+    background-size: 50em;
+    animation: 
+        snowfall2 50s linear infinite;
+        opacity: 0.5;
+}
+.anh3
+{
+    width: 50%;
+    height: 50%;
+    float: right;
+}
+@keyframes snowfall {
+    100%
+    {
+        background-position: 70em 70em;
+    }
+}
+
+@keyframes snowfall2 {
+    100%
+    {
+        background-position: 50em 0;
+    }
+}
